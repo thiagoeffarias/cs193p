@@ -1,4 +1,8 @@
-# cs193p
+<div style="display:flex;flex-direction:colum">
+<img src="https://github.com/thiagoeffarias/cs193p/assets/111746997/49a5da26-8cf2-47fe-94b8-9a545574e624" "/> 
+<h1 ><b>CS193p</b></h1> 
+</div>
+
 ### [Stanford CS193p - Developing Apps for iOS](https://cs193p.sites.stanford.edu/2023)
 
 <details>
