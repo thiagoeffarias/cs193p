@@ -12,6 +12,10 @@ struct EmojiMemoryGameView: View {
     
     var body: some View {
         VStack {
+            Text("MemorizApp")
+                .font(.largeTitle)
+                .bold()
+                .monospaced()
             ScrollView {
                 cards
                     .animation(.default, value: viewModel.cards)
@@ -46,7 +50,7 @@ struct CardView: View {
     }
     
     var body: some View {
-        ZStack ( content : {
+        ZStack {
             let base = RoundedRectangle(cornerRadius: 12)
             Group {
                 base.foregroundColor(.cardBackground)
@@ -55,9 +59,11 @@ struct CardView: View {
                     .font(.system(size: 200))
                     .minimumScaleFactor(0.01)
                     .aspectRatio(1, contentMode: .fit)
-            }.opacity(card.isFaceUp ? 1 : 0)
-            base.fill().opacity(card.isFaceUp ? 0 : 1)
-        })
+            }
+                .opacity(card.isFaceUp ? 1 : 0)
+            base.fill()
+                .opacity(card.isFaceUp ? 0 : 1)
+        }.opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
     }
 }
 
